@@ -1,4 +1,5 @@
-
+## Name: piyush kumar
+## Register Number: 212223220075
 # EX-01-Datatypes-Operators
 ## AIM:
 Write a C program to read 3 characters one by one and print the characters in a reverse order.
@@ -10,8 +11,25 @@ Write a C program to read 3 characters one by one and print the characters in a 
 4.	End the program.
 
 ## PROGRAM:
-
+```
+#include <stdio.h>
+int main()
+{
+    char ch1, ch2, ch3;
+    printf("Enter first character: ");
+    scanf(" %c", &ch1);
+    printf("Enter second character: ");
+    scanf(" %c", &ch2);
+    printf("Enter third character: ");
+    scanf(" %c", &ch3);
+    printf("Characters in reverse order: %c %c %c\n", ch3, ch2, ch1);
+    return 0;
+}
+```
 ## OUTPUT:
+
+![Screenshot 2025-04-27 134143](https://github.com/user-attachments/assets/6d4d2d86-8d76-4294-b4dd-5ebf0666f9ea)
+
 
 
 
@@ -47,10 +65,30 @@ Write a C program to read A values and check whether A is positive number or not
 
 # PROGRAM:
 
+```
+#include <stdio.h>
+int main() 
+{
+    int A;
+    printf("Enter a value: ");
+    scanf("%d", &A);
+    if (A > 0)
+    {
+        printf("%d is a positive number.\n", A);
+    }
+    else 
+    {
+        printf("%d is not a positive number.\n", A);
+    }
+    return 0;
+}
+```
+
 # OUTPUT:
 
+![Screenshot 2025-04-27 134501](https://github.com/user-attachments/assets/e8fc7cf5-ae3c-4fd2-964f-8a7a91ccdb52)
 
-
+![Screenshot 2025-04-27 134918](https://github.com/user-attachments/assets/67360b96-63fc-4660-b0d2-a7e25ddfeb17)
 
 
 
@@ -80,10 +118,26 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+int main() 
+{
+    int num1, den1, num2, den2;
+    float frac1, frac2, min;
+    printf("Enter numerator and denominator of first fraction: ");
+    scanf("%d%d", &num1, &den1);
+    printf("Enter numerator and denominator of second fraction: ");
+    scanf("%d%d", &num2, &den2);
+    frac1 = (float)num1 / den1;
+    frac2 = (float)num2 / den2;
+    min = (frac1 < frac2) ? frac1 : frac2;
+    printf("Minimum value between the two fractions is: %.2f\n", min);
+    return 0;
+```
 
 ## OUTPUT:
 
-
+![Screenshot 2025-04-27 134708](https://github.com/user-attachments/assets/d5319396-a4d5-484d-a92a-4dcbca724fca)
 
 
 
@@ -111,9 +165,27 @@ Write a C program to check whether the input value is equal to 1 using simple if
 6.	End the program.
 
 ## PROGRAM:
+```
+#include <stdio.h>
 
+int main() {
+    int value;
+    printf("Enter a value: ");
+    scanf("%d", &value);
+    
+    if (value == 1) {
+        printf("The input value is equal to 1.\n");
+    } else {
+        printf("The input value is not equal to 1.\n");
+    }
+    
+    return 0;
+}
+```
 ## OUTPUT:
+![Screenshot 2025-04-27 134748](https://github.com/user-attachments/assets/54b38744-270d-4722-a06a-50f5be683dbf)
 
+![Screenshot 2025-04-27 134807](https://github.com/user-attachments/assets/fbbb59b9-a9dd-40cc-8b67-b75ccd150fa9)
 
 
 
@@ -147,8 +219,47 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
-
+```
+#include <stdio.h>
+int main()
+{
+    int m1, m2, m3;
+    float tot, per;
+    printf("Enter marks of three subjects: ");
+    scanf("%d%d%d", &m1, &m2, &m3);
+    tot = m1 + m2 + m3;
+    per = tot / 3;
+    printf("Total Marks = %.2f\n", tot);
+    printf("Percentage = %.2f\n", per);
+    if (m1 >= 40 && m2 >= 40 && m3 >= 40)
+    {
+        if (per >= 60)
+	{
+            printf("Division = First\n");
+        }
+	else if (per >= 48)
+	{
+            printf("Division = Second\n");
+        } 
+	else if (per >= 36) 
+	{
+            printf("Division = Pass\n");
+        }
+    } 
+    else
+    {
+        printf("Division = Fail\n");
+    }
+    
+    return 0;
+}
+```
 ## OUTPUT:
+![Screenshot 2025-04-27 135042](https://github.com/user-attachments/assets/13e70fed-2d75-4a51-971a-720551a1b44e)
+![Screenshot 2025-04-27 140836](https://github.com/user-attachments/assets/79f13337-1f51-4bb0-a4ca-38822e0ccaac)
+
+
+
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
